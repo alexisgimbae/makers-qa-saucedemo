@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.13.1 on win32)" generated="2025-12-10T01:34:51.568678" rpa="false" schemaversion="5">
+<suite id="s1" name="Makers-Qa-Saucedemo" source="C:\Users\alexi\OneDrive\Documentos\makers-qa-saucedemo">
+<suite id="s1-s1" name="Test-Suites" source="C:\Users\alexi\OneDrive\Documentos\makers-qa-saucedemo\test-suites">
+<suite id="s1-s1-s1" name="Smoke Tests" source="C:\Users\alexi\OneDrive\Documentos\makers-qa-saucedemo\test-suites\smoke_tests.robot">
+<test id="s1-s1-s1-t1" name="TC_001: Login con usuario admin válido" line="7">
+<kw name="Abrir Navegador e ir a la web Saucedemo Login" owner="keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-12-10T01:34:52.588215" level="INFO">Opening browser 'firefox' to base url 'https://www.saucedemo.com'.</msg>
+<arg>${SAUCEDEMO_URL_LOGIN}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-12-10T01:34:52.587320" elapsed="11.085798"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-12-10T01:35:03.674866" elapsed="0.028461"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${SAUCEDEMO_LOGO}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-12-10T01:35:03.703968" elapsed="0.081799"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-12-10T01:35:05.788006" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-12-10T01:35:03.786367" elapsed="2.002760"/>
+</kw>
+<status status="PASS" start="2025-12-10T01:34:52.584949" elapsed="13.204542"/>
+</kw>
+<kw name="Get Current Date" owner="DateTime">
+<msg time="2025-12-10T01:35:05.794277" level="INFO">${timestamp} = 20251210_013505</msg>
+<var>${timestamp}</var>
+<arg>result_format=%Y%m%d_%H%M%S</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<status status="PASS" start="2025-12-10T01:35:05.790626" elapsed="0.004572"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-12-10T01:35:05.798078" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
+<arg>${USERNAME_INPUT}</arg>
+<arg>${VALID_USERNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-12-10T01:35:05.796190" elapsed="0.220554"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-12-10T01:35:06.033386" level="INFO">Typing text 'secret_sauce' into text field 'id=password'.</msg>
+<arg>${PASSWORD_INPUT}</arg>
+<arg>${VALID_PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-12-10T01:35:06.020463" elapsed="0.139568"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-12-10T01:35:06.163504" level="INFO">Clicking element 'id=login-button'.</msg>
+<arg>${LOGIN_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-12-10T01:35:06.161762" elapsed="0.205938"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>${PRODUCTS_PAGE_TITLE}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-12-10T01:35:06.368646" elapsed="0.024226"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-12-10T01:35:06.542698" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/saucedemo_20251210_013505.png"&gt;&lt;img src="screenshots/saucedemo_20251210_013505.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>screenshots/saucedemo_${timestamp}.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-12-10T01:35:06.394775" elapsed="0.148822"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-12-10T01:35:06.544649" elapsed="4.071457"/>
+</kw>
+<tag>TC_001</tag>
+<status status="PASS" start="2025-12-10T01:34:52.572587" elapsed="18.044502"/>
+</test>
+<test id="s1-s1-s1-t2" name="TC_002: Login fallido con contraseña errónea" line="18">
+<kw name="Abrir Navegador e ir a la web Saucedemo Login" owner="keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-12-10T01:35:10.640569" level="INFO">Opening browser 'firefox' to base url 'https://www.saucedemo.com'.</msg>
+<arg>${SAUCEDEMO_URL_LOGIN}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-12-10T01:35:10.639644" elapsed="10.262008"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-12-10T01:35:20.902321" elapsed="0.020516"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${SAUCEDEMO_LOGO}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-12-10T01:35:20.923389" elapsed="0.073669"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-12-10T01:35:22.999593" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-12-10T01:35:20.997948" elapsed="2.002286"/>
+</kw>
+<status status="PASS" start="2025-12-10T01:35:10.638097" elapsed="12.362520"/>
+</kw>
+<kw name="Get Current Date" owner="DateTime">
+<msg time="2025-12-10T01:35:23.002233" level="INFO">${timestamp} = 20251210_013523</msg>
+<var>${timestamp}</var>
+<arg>result_format=%Y%m%d_%H%M%S</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<status status="PASS" start="2025-12-10T01:35:23.001310" elapsed="0.001615"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-12-10T01:35:23.004912" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
+<arg>${USERNAME_INPUT}</arg>
+<arg>${VALID_USERNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-12-10T01:35:23.003823" elapsed="0.105619"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-12-10T01:35:23.111359" level="INFO">Typing text 'wrong_password' into text field 'id=password'.</msg>
+<arg>${PASSWORD_INPUT}</arg>
+<arg>${INVALID_PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-12-10T01:35:23.110445" elapsed="0.063620"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-12-10T01:35:23.176729" level="INFO">Clicking element 'id=login-button'.</msg>
+<arg>${LOGIN_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-12-10T01:35:23.175016" elapsed="0.103694"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>${INVALID_LOGIN_MESSAGE}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-12-10T01:35:23.279596" elapsed="0.009002"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-12-10T01:35:23.364658" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/saucedemo_20251210_013523.png"&gt;&lt;img src="screenshots/saucedemo_20251210_013523.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>screenshots/saucedemo_${timestamp}.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-12-10T01:35:23.289341" elapsed="0.076016"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-12-10T01:35:23.366255" elapsed="4.030720"/>
+</kw>
+<tag>TC_002</tag>
+<status status="PASS" start="2025-12-10T01:35:10.628628" elapsed="16.769682"/>
+</test>
+<test id="s1-s1-s1-t3" name="TC_003: Login fallido con usuario erróneo" line="29">
+<kw name="Abrir Navegador e ir a la web Saucedemo Login" owner="keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-12-10T01:35:27.424136" level="INFO">Opening browser 'firefox' to base url 'https://www.saucedemo.com'.</msg>
+<arg>${SAUCEDEMO_URL_LOGIN}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-12-10T01:35:27.423079" elapsed="9.738566"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-12-10T01:35:37.162374" elapsed="0.020808"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${SAUCEDEMO_LOGO}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-12-10T01:35:37.183805" elapsed="0.050620"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-12-10T01:35:39.235923" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-12-10T01:35:37.234871" elapsed="2.001777"/>
+</kw>
+<status status="PASS" start="2025-12-10T01:35:27.421828" elapsed="11.815167"/>
+</kw>
+<kw name="Get Current Date" owner="DateTime">
+<msg time="2025-12-10T01:35:39.239235" level="INFO">${timestamp} = 20251210_013539</msg>
+<var>${timestamp}</var>
+<arg>result_format=%Y%m%d_%H%M%S</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<status status="PASS" start="2025-12-10T01:35:39.237975" elapsed="0.001765"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-12-10T01:35:39.243093" level="INFO">Typing text 'Incorrect_username' into text field 'id=user-name'.</msg>
+<arg>${USERNAME_INPUT}</arg>
+<arg>${INVALID_USERNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-12-10T01:35:39.240748" elapsed="0.190316"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-12-10T01:35:39.433109" level="INFO">Typing text 'secret_sauce' into text field 'id=password'.</msg>
+<arg>${PASSWORD_INPUT}</arg>
+<arg>${VALID_PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-12-10T01:35:39.431901" elapsed="0.064736"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-12-10T01:35:39.498888" level="INFO">Clicking element 'id=login-button'.</msg>
+<arg>${LOGIN_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-12-10T01:35:39.497835" elapsed="0.102405"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>${INVALID_LOGIN_MESSAGE}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-12-10T01:35:39.601056" elapsed="0.009869"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-12-10T01:35:39.689117" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/saucedemo_20251210_013539.png"&gt;&lt;img src="screenshots/saucedemo_20251210_013539.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>screenshots/saucedemo_${timestamp}.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-12-10T01:35:39.611783" elapsed="0.078263"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-12-10T01:35:39.690993" elapsed="4.008499"/>
+</kw>
+<tag>TC_003</tag>
+<status status="PASS" start="2025-12-10T01:35:27.408628" elapsed="16.291807"/>
+</test>
+<test id="s1-s1-s1-t4" name="TC_004: Validación de campos Username vacío" line="40">
+<kw name="Abrir Navegador e ir a la web Saucedemo Login" owner="keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-12-10T01:35:43.724025" level="INFO">Opening browser 'firefox' to base url 'https://www.saucedemo.com'.</msg>
+<arg>${SAUCEDEMO_URL_LOGIN}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-12-10T01:35:43.722583" elapsed="10.685187"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-12-10T01:35:54.409871" elapsed="0.036282"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${SAUCEDEMO_LOGO}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-12-10T01:35:54.447007" elapsed="0.069736"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-12-10T01:35:56.519003" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-12-10T01:35:54.517509" elapsed="2.002808"/>
+</kw>
+<status status="PASS" start="2025-12-10T01:35:43.720464" elapsed="12.800386"/>
+</kw>
+<kw name="Get Current Date" owner="DateTime">
+<msg time="2025-12-10T01:35:56.523417" level="INFO">${timestamp} = 20251210_013556</msg>
+<var>${timestamp}</var>
+<arg>result_format=%Y%m%d_%H%M%S</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<status status="PASS" start="2025-12-10T01:35:56.521915" elapsed="0.002441"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-12-10T01:35:56.528442" level="INFO">Typing text 'secret_sauce' into text field 'id=password'.</msg>
+<arg>${PASSWORD_INPUT}</arg>
+<arg>${VALID_PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-12-10T01:35:56.525554" elapsed="0.139987"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-12-10T01:35:56.671222" level="INFO">Clicking element 'id=login-button'.</msg>
+<arg>${LOGIN_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-12-10T01:35:56.666843" elapsed="0.177757"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>${ERROR_USERNAME_REQUIRED}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-12-10T01:35:56.845302" elapsed="0.010512"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-12-10T01:35:56.957662" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/saucedemo_20251210_013556.png"&gt;&lt;img src="screenshots/saucedemo_20251210_013556.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>screenshots/saucedemo_${timestamp}.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-12-10T01:35:56.857434" elapsed="0.101726"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-12-10T01:35:56.960823" elapsed="4.042377"/>
+</kw>
+<tag>TC_004</tag>
+<status status="PASS" start="2025-12-10T01:35:43.711093" elapsed="17.293148"/>
+</test>
+<test id="s1-s1-s1-t5" name="TC_005: Validación de campos Password vacío" line="50">
+<kw name="Abrir Navegador e ir a la web Saucedemo Login" owner="keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-12-10T01:36:01.024807" level="INFO">Opening browser 'firefox' to base url 'https://www.saucedemo.com'.</msg>
+<arg>${SAUCEDEMO_URL_LOGIN}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-12-10T01:36:01.023999" elapsed="9.930021"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-12-10T01:36:10.954696" elapsed="0.017141"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${SAUCEDEMO_LOGO}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-12-10T01:36:10.974274" elapsed="0.064145"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-12-10T01:36:13.040369" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-12-10T01:36:11.038949" elapsed="2.004117"/>
+</kw>
+<status status="PASS" start="2025-12-10T01:36:01.022792" elapsed="12.021642"/>
+</kw>
+<kw name="Get Current Date" owner="DateTime">
+<msg time="2025-12-10T01:36:13.046822" level="INFO">${timestamp} = 20251210_013613</msg>
+<var>${timestamp}</var>
+<arg>result_format=%Y%m%d_%H%M%S</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<status status="PASS" start="2025-12-10T01:36:13.045511" elapsed="0.001743"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-12-10T01:36:13.049466" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
+<arg>${USERNAME_INPUT}</arg>
+<arg>${VALID_USERNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-12-10T01:36:13.048120" elapsed="0.113246"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-12-10T01:36:13.164025" level="INFO">Clicking element 'id=login-button'.</msg>
+<arg>${LOGIN_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-12-10T01:36:13.163144" elapsed="0.096432"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>${ERROR_PASSWORD_REQUIRED}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-12-10T01:36:13.260457" elapsed="0.007602"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-12-10T01:36:13.345697" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/saucedemo_20251210_013613.png"&gt;&lt;img src="screenshots/saucedemo_20251210_013613.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>screenshots/saucedemo_${timestamp}.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-12-10T01:36:13.268676" elapsed="0.078004"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-12-10T01:36:13.347610" elapsed="3.942576"/>
+</kw>
+<tag>TC_005</tag>
+<status status="PASS" start="2025-12-10T01:36:01.015306" elapsed="16.275719"/>
+</test>
+<status status="PASS" start="2025-12-10T01:34:51.695016" elapsed="85.607866"/>
+</suite>
+<status status="PASS" start="2025-12-10T01:34:51.678028" elapsed="85.646453"/>
+</suite>
+<status status="PASS" start="2025-12-10T01:34:51.586324" elapsed="85.757435"/>
+</suite>
+<statistics>
+<total>
+<stat pass="5" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">TC_001</stat>
+<stat pass="1" fail="0" skip="0">TC_002</stat>
+<stat pass="1" fail="0" skip="0">TC_003</stat>
+<stat pass="1" fail="0" skip="0">TC_004</stat>
+<stat pass="1" fail="0" skip="0">TC_005</stat>
+</tag>
+<suite>
+<stat name="Makers-Qa-Saucedemo" id="s1" pass="5" fail="0" skip="0">Makers-Qa-Saucedemo</stat>
+<stat name="Test-Suites" id="s1-s1" pass="5" fail="0" skip="0">Makers-Qa-Saucedemo.Test-Suites</stat>
+<stat name="Smoke Tests" id="s1-s1-s1" pass="5" fail="0" skip="0">Makers-Qa-Saucedemo.Test-Suites.Smoke Tests</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
