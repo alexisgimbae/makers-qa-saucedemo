@@ -1,4 +1,4 @@
-# 🧪 Mock page SauceDemo - Smoke Tests - Robot Framework
+# 🧪 Mock page SauceDemo / Robot Framework
 
 Este repositorio contiene los scripts para la implementación del (Módulo de Automatización) para la Prueba Técnica de QA de Makers, enfocado en la Mock page SauceDemo.
 
@@ -83,9 +83,6 @@ El script captura screenshots automáticamente en escenarios:
 ### Security Tests:
 - TC_004: SQL Injection en campos de login
 - TC_005: Authentication Bypass
-
-### Performance Tests:
-- TC_006: Tiempo de respuesta de login < 2 segundos
 
 ## Licencia
 MIT License
